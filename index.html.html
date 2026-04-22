@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FacePlay Creator Program</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E40AF',
+            secondary: '#3B82F6',
+            accent: '#60A5FA',
+            dark: '#0F172A',
+            light: '#F8FAFC',
+          },
+          fontFamily: {
+            sans: ['SF Pro Display', 'Inter', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .glass {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .glass-dark {
+        background: rgba(15, 23, 42, 0.35);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .text-gradient {
+        background: linear-gradient(90deg, #3B82F6, #60A5FA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .rule-item {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .rule-item:hover {
+        transform: translateX(6px);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    body {
+      background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.15), transparent 40%),
+                  radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.15), transparent 40%), #0F172A;
+      background-attachment: fixed;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(59, 130, 246, 0.5);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body class="text-light min-h-screen">
+<header class="fixed top-0 left-0 right-0 z-50">
+  <nav class="glass-dark px-6 py-4 mx-4 mt-4 rounded-2xl flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <!-- 替换FP文字为面具图片，保持原有尺寸和动画效果 -->
+      <div class="h-10 w-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center animate-float overflow-hidden">
+        <img src="https://p11-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/f22177051e464d7da22e6a0378d5c2bf.png~tplv-a9rns2rl98-image.png?lk3s=8e244e95&rcl=20260415153053609248FDB2827FAA96ED&rrcfp=dafada99&x-expires=2092462253&x-signature=yNjVFAE4CJtuYPNKPFNLrCUISHg%3D" 
+             alt="FacePlay Logo" 
+             class="w-full h-full object-contain">
+      </div>
+      <h1 class="text-xl font-bold">FacePlay Creator</h1>
+    </div>
+    <a href="https://docs.google.com/forms/d/1SAdgMLHWbZQDQvnDFYeEUaGG3YsilWg-l_ddE44JggY/edit" class="px-5 py-2 bg-gradient-to-r from-primary to-accent rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-primary/20 transition-all">
+      Join Now
+    </a>
+  </nav>
+</header>
+
+<main class="container mx-auto px-4 pt-32 pb-20 max-w-5xl">
+  <section class="text-center mb-16">
+    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight">
+      <span class="text-gradient">FacePlay Creator</span> Program
+    </h1>
+    <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Official Guidelines for Verified Partners & Content Creators</p>
+  </section>
+
+  <div class="grid gap-6 md:gap-8">
+
+    <section class="glass rounded-2xl p-6 md:p-8">
+      <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+        <i class="fa fa-id-card-o text-accent"></i> Definition
+      </h2>
+      <ul class="space-y-3 text-gray-200">
+        <li class="rule-item flex gap-3">
+          <span class="text-accent">●</span>
+          <p>A FacePlay Partner is an officially verified creator who produces original AI content, drives user growth, and strengthens brand influence through social media engagement.</p>
+        </li>
+        <li class="rule-item flex gap-3">
+          <span class="text-accent">●</span>
+          <p><strong class="text-white font-semibold">Partners must add CPP @faceplay_official / @faceplay_app to their social media bio.</strong></p>
+        </li>
+        <li class="rule-item flex gap-3">
+          <span class="text-accent">●</span>
+          <p><strong class="text-white font-semibold">Publish at least 8 posts per month.</strong></p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="glass rounded-2xl p-6 md:p-8">
+      <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+        <i class="fa fa-user-plus text-accent"></i> How to Join
+      </h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="glass p-4 rounded-xl">
+          <h3 class="font-semibold text-white">Official Invitation</h3>
+          <p class="text-sm text-gray-300 mt-2">Direct invite from the FacePlay team.</p>
+        </div>
+        <div class="glass p-4 rounded-xl">
+          <h3 class="font-semibold text-white">Application</h3>
+          <p class="text-sm text-gray-300 mt-2">Submit an official form for review.</p>
+        </div>
+        <div class="glass p-4 rounded-xl">
+          <h3 class="font-semibold text-white">Recommendation</h3>
+          <p class="text-sm text-gray-300 mt-2">Partners can refer qualified creators and earn up to <strong class="text-white font-semibold">$100</strong> per successful referral.
+        </div>
+      </div>
+    </section>
+
+    <section class="glass rounded-2xl p-6 md:p-8">
+      <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+        <i class="fa fa-gift text-accent"></i> Partner Benefits
+      </h2>
+      <div class="space-y-5">
+        <div>
+          <h3 class="font-semibold text-gradient text-lg mb-3">Base Benefits</h3>
+          <ul class="space-y-2 text-gray-200">
+            <li class="rule-item flex gap-3"><span>●</span> Free SVIP Membership during partnership</li>
+            <li class="rule-item flex gap-3"><span>●</span> Template Collaboration: Eligibility for commission-based work</li>
+            <li class="rule-item flex gap-3"><span>●</span> Monthly 3,000 Coins base stipend</li>
+            <li class="rule-item flex gap-3"><span>●</span> Claim via DM with your FacePlay ID; coins expire monthly</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gradient text-lg mb-3">Social Media Rewards</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="glass p-3 rounded-xl text-center">
+              <p class="font-medium">Photo Post</p>
+              <p class="text-gradient font-bold">+200 Coins</p>
+              <p class="text-xs text-gray-400">At least 4 images</p>
+            </div>
+            <div class="glass p-3 rounded-xl text-center">
+              <p class="font-medium">Reel</p>
+              <p class="text-gradient font-bold">+500 Coins</p>
+            </div>
+            <div class="glass p-3 rounded-xl text-center">
+              <p class="font-medium">High-Quality Post</p>
+              <p class="text-gradient font-bold">+2000 Coins</p>
+			  <p class="text-xs text-gray-400">Based on views, likes, and comments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass rounded-2xl p-6 md:p-8">
+      <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+        <i class="fa fa-file-text-o text-accent"></i> Posting Rules
+      </h2>
+      <ul class="space-y-3 text-gray-200">
+        <li class="rule-item flex gap-3"><span>●</span> Content must be original and made with FacePlay</li>
+        <li class="rule-item flex gap-3"><span>●</span> <strong class="text-white font-semibold">Include #faceplay + tag @faceplay_official (IG) / @faceplay_app (TK)</strong></li>
+        <li class="rule-item flex gap-3"><span>●</span> <strong class="text-white font-semibold">Mention template or tool name (e.g. AI lab - seedance2)</strong></li>
+        <li class="rule-item flex gap-3"><span>●</span> Post must stay public for at least 30 days</li>
+        <li class="rule-item flex gap-3"><span>●</span> Same content only counts once across platforms</li>
+      </ul>
+      <div class="mt-4 glass p-4 rounded-xl border-l-4 border-accent">
+        <h3 class="font-semibold">Collab Posts:</h3>
+        <p class="text-sm text-gray-300 mt-1">Content is subject to selection based on aesthetic appeal and originality. (including cover)</p>
+        <p class="text-sm text-gray-300 mt-1">All posts will be recorded regardless of selection.</p>
+        <p class="text-sm text-gray-300 mt-1">For collaboration inquiries, please confirm the content with us in advance.</p>
+      </div>
+    </section>
+
+    <section class="glass rounded-2xl p-6 md:p-8">
+      <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+        <i class="fa fa-diamond text-accent"></i> Monthly Reward Caps
+      </h2>
+      <div class="overflow-hidden rounded-xl glass">
+        <div class="grid grid-cols-2 bg-white/10">
+          <div class="p-3 font-semibold">Condition</div>
+          <div class="p-3 font-semibold">Coin Cap</div>
+        </div>
+        <div class="grid grid-cols-2 border-t border-white/10">
+          <div class="p-3">Top 5 template creators</div>
+          <div class="p-3 text-gradient font-bold">No Cap</div>
+        </div>
+        <div class="grid grid-cols-2 border-t border-white/10">
+          <div class="p-3">Other creators</div>
+          <div class="p-3 font-medium">50,000 Coins</div>
+        </div>
+      </div>
+      <p class="mt-3 text-sm text-gray-300">Monthly 3,000 base coins are NOT subject to the cap</p>
+    </section>
+
+    <section class="glass rounded-2xl p-6 md:p-8">
+      <h2 class="text-2xl font-bold mb-5 flex items-center gap-2">
+        <i class="fa fa-exclamation-triangle text-accent"></i> Violations & Penalties
+      </h2>
+      <div class="space-y-3">
+        <div class="glass p-3 rounded-xl">
+          <p>Cheating, fake data, or plagiarism → <span class="text-red-400 font-semibold">immediate removal</span></p>
+        </div>
+        <div class="glass p-3 rounded-xl">
+          <p>Inappropriate content → <span class="text-red-400 font-semibold">instant termination</span></p>
+        </div>
+        <div class="glass p-3 rounded-xl">
+          <p>Long-term inactivity may result in <span class="text-orange-300 font-semibold">partner status removal</span></p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="join" class="mt-12 text-center">
+    <a href="https://docs.google.com/forms/d/1SAdgMLHWbZQDQvnDFYeEUaGG3YsilWg-l_ddE44JggY/edit" class="inline-block px-8 py-3 bg-gradient-to-r from-primary to-accent rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-primary/30 transition-all transform hover:-translate-y-1">
+      Become a FacePlay Creator
+    </a>
+  </div>
+</main>
+
+<footer class="glass-dark py-6 text-center text-sm text-gray-400">
+  <p>© 2026 FacePlay. See your dreams.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
